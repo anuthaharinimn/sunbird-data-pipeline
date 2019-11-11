@@ -3,6 +3,11 @@ jobs:
   ep-build:
     working_directory: ~/dp/data-pipeline
     machine: true
+sonar-login:
+        default: SONARCLOUD_TOKEN
+        description: |
+          Environemnt variable key containing the SonarCloud API token to use for scanning -- this is included in the `st-global` context.
+        type: SONAR_TOKEN    
     steps:
       - checkout:
           path: ~/dp
